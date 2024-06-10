@@ -1,0 +1,8 @@
+-- Your SQL goes here
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    mail TEXT NOT NULL,
+    password TEXT NOt NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
