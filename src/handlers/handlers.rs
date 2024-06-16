@@ -144,7 +144,7 @@ pub async fn create_vote(pool: web::Data<DbPool>, vote_request: web::Json<NewVot
     };
 
     // Отправка GenesisBlock валидаторам
-    let validator_urls = vec!["http://127.0.0.1:10040/genesis", "http://127.0.0.1:9096/genesis"];
+    let validator_urls = vec!["http://127.0.0.1:10098/genesis", "http://127.0.0.1:10037/genesis"];
     for url in validator_urls {
         if let Err(err) = send_genesis_block(&genesis_block, url).await {
             return HttpResponse::InternalServerError().body(format!("Failed to send genesis block to {}: {}", url, err));
